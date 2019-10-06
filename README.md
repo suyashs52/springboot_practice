@@ -20,4 +20,10 @@ password:
 
 demo image put in image folder
 
+validation login
+for ssn: 123-45-6789,856-45-6789 are valid but 856-456789 is invalid
+name shouldn't have space
+address have space etc regex ,can see when validation false.
+dob default html 5 date used
+
 
