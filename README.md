@@ -1,4 +1,4 @@
-# springboot_practice
+# Crud Demo Project
 crud operation for user entity
 
 list all user
