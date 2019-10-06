@@ -60,7 +60,16 @@
 						<div class="form-group col-md-6">
 							<label for="salary" class="col-form-label">Salary</label> <input required
 								type="number" th:field="*{salary}" class="form-control"
-								id="salary" placeholder="Salary"> <span
+								id="salary" placeholder="Salary">
+								
+								 <input  
+								type="hidden" th:field="*{current}" 
+								id="current" >  <input  
+								type="hidden" th:field="*{count}" 
+								id="count" > 
+								
+								
+								 <span
 								th:if="${#fields.hasErrors('salary')}" th:errors="salary"
 								class="text-danger"></span>
 						</div>
@@ -94,8 +103,8 @@
         	obj[i].value="";
         	}
         }
-    var count=${count};
-    var cur=${cur};
+    var count=parseInt(document.getElementById('count').value);
+    var cur=parseInt(document.getElementById('current').value);
     var previous=function(){
         var current=0;
         if(cur==null) current=0;
@@ -107,7 +116,7 @@
     }
     
     var next=function(){
-         if(cur>count) cur=0;
+         if(cur>=count) cur=0;
          cur++;
     	window.location.href="/edit/"+cur;
     }

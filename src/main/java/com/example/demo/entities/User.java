@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -38,6 +39,10 @@ public class User {
 
 	@NotBlank(message = "Gender is mandatory")
 	private String gender;
+	 
+	private Integer count;
+	 
+	private Integer current;
 
 	public User() {
 	}
@@ -54,6 +59,22 @@ public class User {
 		this.address = address;
 		this.salary = salary;
 		this.gender = gender;
+	}
+
+	public Integer getCount() {
+		return count;
+	}
+
+	public Integer getCurrent() {
+		return current;
+	}
+
+	public void setCount(Integer count) {
+		this.count = count;
+	}
+
+	public void setCurrent(Integer current) {
+		this.current = current;
 	}
 
 	public long getId() {

@@ -7,5 +7,7 @@ CREATE TABLE TMP_USER (
   name VARCHAR(250) NOT NULL,
   address VARCHAR(250) NOT NULL,
   salary integer NOT NULL,
+  current integer  NULL,
+  count integer  NULL,
   gender VARCHAR(250) DEFAULT NULL
 );
